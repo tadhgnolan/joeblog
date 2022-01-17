@@ -17,7 +17,7 @@ class Post(models.Model):
     likes = models.ManyToManyField(User, related_name='blogpost_like', blank=True)
 
     class Meta:
-        ordering = ["-created-on"]
+        ordering = ["-created_on"]
 
     def number_of_likes(self):
         return self.likes.count()
